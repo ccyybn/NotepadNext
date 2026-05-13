@@ -54,13 +54,14 @@ ApplicationSettings::ApplicationSettings(QObject *parent)
 
 bool ApplicationSettings::effectiveDarkMode() const
 {
-    switch (theme()) {
-    case LightTheme: return false;
-    case DarkTheme:  return true;
-    case SystemTheme:
-    default:
-        return QGuiApplication::styleHints()->colorScheme() == Qt::ColorScheme::Dark;
-    }
+//     switch (theme()) {
+//     case LightTheme: return false;
+//     case DarkTheme:  return true;
+//     case SystemTheme:
+//     default:
+//         return QGuiApplication::styleHints()->colorScheme() == Qt::ColorScheme::Dark;
+//     }
+    return true;
 }
 
 CREATE_SETTING(Gui, ShowMenuBar, showMenuBar, bool, true)
